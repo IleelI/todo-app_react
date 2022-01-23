@@ -26,6 +26,7 @@ class Organiser extends Component {
         });
     };
 
+    /* todo add uuid id generation for todo items */
     handleFormSubmit(e) {
         e.preventDefault();
         const { todo, todos } = this.state;

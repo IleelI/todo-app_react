@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { v4 as uuid } from 'uuid';
 import OrganiserInput from './OrganiserInput';
 import OrganiserFilters from './OrganiserFilters';
 import OrganiserList from './OrganiserList';
@@ -10,7 +11,10 @@ class Organiser extends Component {
         super(props);
         // Our single source of truth for OrganiserInput component, OrganiserList and OrganiserFilters
         this.state = {
-            todo: '',
+            todo: {
+                value: '',
+                id: uuid()
+            },
             todos: [],
             filter: filters[0]
         };
@@ -20,20 +24,21 @@ class Organiser extends Component {
     }
 
     handleInputChange = ({ target }) => {
-        const updatedTodo = target.value;
+        const { todo } = this.state;
+        const updatedTodo = { ...todo, value: target.value };
         this.setState({
             todo: updatedTodo
         });
     };
 
-    /* todo add uuid id generation for todo items */
     handleFormSubmit(e) {
         e.preventDefault();
         const { todo, todos } = this.state;
-        if (todo.length === 0) return;
+        if (todo.value.length === 0) return;
+        // Adding new to-do with uuid into array of todos.
         const newTodos = todos.concat(todo);
-        const newTodo = '';
-        this.setState({ todo: newTodo, todos: newTodos });
+        // Updating state with new array and cleared input field
+        this.setState({ todo: { value: '', id: uuid() }, todos: newTodos });
     }
 
     handleButtonClick({ target: { innerText: newFilter } }) {

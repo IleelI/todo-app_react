@@ -4,16 +4,22 @@ import PropTypes from 'prop-types';
 function OrganiserList({ todos }) {
     return (
         <ul className="list__contents">
-            {todos.map((todo) => (
-                /* todo add uuid id generation for todo items */
-                <li className="bg-blue-400 text-neutral-50">{todo}</li>
+            {todos.map(({ value, id }) => (
+                <li key={id} className="bg-blue-400 text-neutral-50">
+                    {value}
+                </li>
             ))}
         </ul>
     );
 }
 
 OrganiserList.propTypes = {
-    todos: PropTypes.arrayOf(PropTypes.string)
+    todos: PropTypes.arrayOf(
+        PropTypes.shape({
+            value: PropTypes.string,
+            id: PropTypes.string
+        })
+    )
 };
 OrganiserList.defaultProps = {
     todos: []

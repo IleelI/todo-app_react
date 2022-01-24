@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { PlusIcon } from '@heroicons/react/outline';
 
-function OrganiserInput({ todo, onFormSubmit, onInputChange }) {
+function OrganiserInput({ todo: { value }, onFormSubmit, onInputChange }) {
     return (
         <form className="todo__input" onSubmit={onFormSubmit}>
             <label htmlFor="todo">
@@ -10,7 +10,7 @@ function OrganiserInput({ todo, onFormSubmit, onInputChange }) {
                 <input
                     name="todo"
                     type="text"
-                    value={todo}
+                    value={value}
                     onChange={onInputChange}
                     placeholder="Feed the cat."
                 />
@@ -24,12 +24,18 @@ function OrganiserInput({ todo, onFormSubmit, onInputChange }) {
 }
 
 OrganiserInput.propTypes = {
-    todo: PropTypes.string,
+    todo: PropTypes.shape({
+        value: PropTypes.string,
+        id: PropTypes.string
+    }),
     onFormSubmit: PropTypes.func,
     onInputChange: PropTypes.func
 };
 OrganiserInput.defaultProps = {
-    todo: '',
+    todo: {
+        value: '',
+        id: ''
+    },
     onFormSubmit: null,
     onInputChange: null
 };

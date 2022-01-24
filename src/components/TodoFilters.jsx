@@ -8,7 +8,7 @@ const capitalizeFilterName = (filter) => {
     return `${capitalizedLetter}${restOfFilter}`;
 };
 
-function OrganiserFilters({ currentFilter, onButtonClick }) {
+function TodoFilters({ currentFilter, onFilterButtonClick }) {
     return (
         <header className="list__filters">
             {Object.entries(filters).map(([filterName, filterValue]) => (
@@ -16,7 +16,7 @@ function OrganiserFilters({ currentFilter, onButtonClick }) {
                     className={currentFilter === filterValue ? 'bg-emerald-500' : ''}
                     key={filterName}
                     type="button"
-                    onClick={onButtonClick}>
+                    onClick={onFilterButtonClick}>
                     {capitalizeFilterName(filterValue)}
                 </button>
             ))}
@@ -24,13 +24,13 @@ function OrganiserFilters({ currentFilter, onButtonClick }) {
     );
 }
 
-OrganiserFilters.propTypes = {
+TodoFilters.propTypes = {
     currentFilter: PropTypes.string,
-    onButtonClick: PropTypes.func
+    onFilterButtonClick: PropTypes.func
 };
-OrganiserFilters.defaultProps = {
+TodoFilters.defaultProps = {
     currentFilter: '',
-    onButtonClick: null
+    onFilterButtonClick: null
 };
 
-export default OrganiserFilters;
+export default TodoFilters;

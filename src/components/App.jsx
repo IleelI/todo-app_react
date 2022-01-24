@@ -1,14 +1,14 @@
 import React from 'react';
 import AppHeader from './AppHeader';
 import AppFooter from './AppFooter';
-import Organiser from './Organiser';
+import TodoMain from './TodoMain';
 
 function App() {
     return (
         <div className="app-wrapper">
             <div className="app">
                 <AppHeader appName="Doify" appSlogan="Let's get it done!" />
-                <Organiser />
+                <TodoMain />
                 <AppFooter />
             </div>
         </div>

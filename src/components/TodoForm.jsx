@@ -2,44 +2,44 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { PlusIcon } from '@heroicons/react/outline';
 
-function OrganiserInput({ todo: { value }, onFormSubmit, onInputChange }) {
+function TodoForm({ todo: { value }, onTodoFormSubmit, onTodoInputChange }) {
     return (
-        <form className="todo__input" onSubmit={onFormSubmit}>
+        <form className="todo__input" onSubmit={onTodoFormSubmit}>
             <label htmlFor="todo">
                 <h3>Enter your task:</h3>
                 <input
                     name="todo"
                     type="text"
                     value={value}
-                    onChange={onInputChange}
+                    onChange={onTodoInputChange}
                     placeholder="Feed the cat."
                 />
             </label>
             <button type="submit" value="Submit">
                 Add todo
-                <PlusIcon />
+                <PlusIcon className="w-12 h-12 px-2 py-2 bg-slate-200 rounded-full text-emerald-500" />
             </button>
         </form>
     );
 }
 
-OrganiserInput.propTypes = {
+TodoForm.propTypes = {
     todo: PropTypes.shape({
         value: PropTypes.string,
         id: PropTypes.string,
         isFinished: PropTypes.bool
     }),
-    onFormSubmit: PropTypes.func,
-    onInputChange: PropTypes.func
+    onTodoFormSubmit: PropTypes.func,
+    onTodoInputChange: PropTypes.func
 };
-OrganiserInput.defaultProps = {
+TodoForm.defaultProps = {
     todo: {
         value: '',
         id: '',
         isFinished: false
     },
-    onFormSubmit: null,
-    onInputChange: null
+    onTodoFormSubmit: null,
+    onTodoInputChange: null
 };
 
-export default OrganiserInput;
+export default TodoForm;

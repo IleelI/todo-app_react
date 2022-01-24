@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { filters } from '../constants';
 
 const capitalizeFilterName = (filter) => {
     const capitalizedLetter = filter.charAt(0).toUpperCase();
@@ -7,16 +8,16 @@ const capitalizeFilterName = (filter) => {
     return `${capitalizedLetter}${restOfFilter}`;
 };
 
-function OrganiserFilters({ filters, currentFilter, onButtonClick }) {
+function OrganiserFilters({ currentFilter, onButtonClick }) {
     return (
         <header className="list__filters">
-            {filters.map((filter) => (
+            {Object.entries(filters).map(([filterName, filterValue]) => (
                 <button
-                    className={filter === currentFilter ? 'bg-emerald-500' : ''}
-                    key={filter.toString()}
+                    className={currentFilter === filterValue ? 'bg-emerald-500' : ''}
+                    key={filterName}
                     type="button"
                     onClick={onButtonClick}>
-                    {capitalizeFilterName(filter)}
+                    {capitalizeFilterName(filterValue)}
                 </button>
             ))}
         </header>
@@ -24,12 +25,10 @@ function OrganiserFilters({ filters, currentFilter, onButtonClick }) {
 }
 
 OrganiserFilters.propTypes = {
-    filters: PropTypes.arrayOf(PropTypes.string),
     currentFilter: PropTypes.string,
     onButtonClick: PropTypes.func
 };
 OrganiserFilters.defaultProps = {
-    filters: [],
     currentFilter: '',
     onButtonClick: null
 };

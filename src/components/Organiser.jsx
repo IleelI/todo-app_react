@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { v4 as uuid } from 'uuid';
+import { filters } from '../constants';
 import OrganiserInput from './OrganiserInput';
 import OrganiserFilters from './OrganiserFilters';
 import OrganiserList from './OrganiserList';
-
-const filters = ['all', 'finished', 'unfinished'];
 
 class Organiser extends Component {
     constructor(props) {
@@ -13,10 +12,11 @@ class Organiser extends Component {
         this.state = {
             todo: {
                 value: '',
-                id: uuid()
+                id: uuid(),
+                isFinished: false
             },
             todos: [],
-            filter: filters[0]
+            filter: filters.ALL
         };
         this.handleInputChange = this.handleInputChange.bind(this);
         this.handleFormSubmit = this.handleFormSubmit.bind(this);
@@ -38,7 +38,7 @@ class Organiser extends Component {
         // Adding new to-do with uuid into array of todos.
         const newTodos = todos.concat(todo);
         // Updating state with new array and cleared input field
-        this.setState({ todo: { value: '', id: uuid() }, todos: newTodos });
+        this.setState({ todo: { value: '', id: uuid(), isFinished: false }, todos: newTodos });
     }
 
     handleButtonClick({ target: { innerText: newFilter } }) {
@@ -61,11 +61,10 @@ class Organiser extends Component {
                 <article className="todo__list-wrapper">
                     <h1 className="list__heading">Here are your todos</h1>
                     <OrganiserFilters
-                        filters={filters}
                         currentFilter={filter}
                         onButtonClick={this.handleButtonClick}
                     />
-                    <OrganiserList todos={todos} />
+                    <OrganiserList currentFilter={filter} todos={todos} />
                 </article>
             </main>
         );

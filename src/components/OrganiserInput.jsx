@@ -26,7 +26,8 @@ function OrganiserInput({ todo: { value }, onFormSubmit, onInputChange }) {
 OrganiserInput.propTypes = {
     todo: PropTypes.shape({
         value: PropTypes.string,
-        id: PropTypes.string
+        id: PropTypes.string,
+        isFinished: PropTypes.bool
     }),
     onFormSubmit: PropTypes.func,
     onInputChange: PropTypes.func
@@ -34,7 +35,8 @@ OrganiserInput.propTypes = {
 OrganiserInput.defaultProps = {
     todo: {
         value: '',
-        id: ''
+        id: '',
+        isFinished: false
     },
     onFormSubmit: null,
     onInputChange: null

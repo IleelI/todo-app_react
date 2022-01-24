@@ -5,6 +5,13 @@ import TodoForm from './TodoForm';
 import TodoFilters from './TodoFilters';
 import TodoList from './TodoList';
 
+/*
+TODO:
+    · Style application with dark mode primary in mind.
+    · Add json server as mock database.
+    · Switch from using local used data to server used one.
+    · Introduce login/register functionality into app.
+*/
 class TodoMain extends Component {
     constructor(props) {
         super(props);

@@ -5,15 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f8d625d3-fa52-4754-ae90-52bafcab246a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/TodoList.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/TodoMain.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Organiser.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/OrganiserFilters.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TodoFilters.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/OrganiserInput.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TodoForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/OrganiserList.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TodoMain.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TodoMain.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +98,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="filters-implementation" />
+                        <option value="origin/development" />
                       </list>
                     </value>
                   </entry>

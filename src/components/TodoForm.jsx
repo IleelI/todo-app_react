@@ -4,20 +4,29 @@ import { PlusIcon } from '@heroicons/react/outline';
 
 function TodoForm({ todo: { value }, onTodoFormSubmit, onTodoInputChange }) {
     return (
-        <form className="todo__input" onSubmit={onTodoFormSubmit}>
-            <label htmlFor="todo">
-                <h3>Enter your task:</h3>
+        <form className="mb-8 flex flex-col sm:container sm:mx-auto" onSubmit={onTodoFormSubmit}>
+            <label className="mb-4" htmlFor="todo">
+                <h3 className="mb-2 text-xl font-semibold">New Todo:</h3>
                 <input
                     name="todo"
                     type="text"
                     value={value}
                     onChange={onTodoInputChange}
-                    placeholder="Feed the cat."
+                    className="
+                    w-full px-4 py-1.5 rounded-md text-base bg-slate-50
+                    shadow-inner shadow-xl shadow-slate-300
+                    focus:text-emerald-700 focus:shadow-emerald-200 outline-0"
                 />
             </label>
-            <button type="submit" value="Submit">
-                Add todo
-                <PlusIcon className="w-12 h-12 px-2 py-2 bg-slate-200 rounded-full text-emerald-500" />
+            <button
+                className="
+                w-full px-4 py-2 flex items-center self-end rounded-md bg-emerald-400 hover:bg-emerald-600 text-white
+                shadow drop-shadow-md shadow-slate-300
+                sm:container sm:w-1/3"
+                type="submit"
+                value="Submit">
+                <p className="text-left flex-1">Add todo</p>
+                <PlusIcon className="w-6 h-6 flex-0 text-white-500" />
             </button>
         </form>
     );

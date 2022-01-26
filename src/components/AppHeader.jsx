@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 
 function AppHeader({ appName, appSlogan }) {
     return (
-        <header className="app__header">
-            <h1 className="app__name">{appName}</h1>
-            <h3 className="app__slogan">{appSlogan}</h3>
+        <header className="mb-8 px-8 py-4 bg-slate-50 rounded-2xl drop-shadow-lg">
+            <h1 className="text-3xl font-bold text-emerald-500">{appName}</h1>
+            <h3 className="app__slogan text-xl text-slate-700">{appSlogan}</h3>
         </header>
     );
 }

@@ -10,16 +10,20 @@ const capitalizeFilterName = (filter) => {
 
 function TodoFilters({ currentFilter, onFilterButtonClick }) {
     return (
-        <header className="list__filters">
-            {Object.entries(filters).map(([filterName, filterValue]) => (
-                <button
-                    className={currentFilter === filterValue ? 'bg-emerald-500' : ''}
-                    key={filterName}
-                    type="button"
-                    onClick={onFilterButtonClick}>
-                    {capitalizeFilterName(filterValue)}
-                </button>
-            ))}
+        <header className="mb-4 flex flex-col justify-between flex-wrap sm:flex-row">
+            {Object.entries(filters).map(([filterName, filterValue]) => {
+                const selectedFilterStyle =
+                    currentFilter === filterValue ? 'bg-emerald-400 text-white' : '';
+                return (
+                    <button
+                        className={`my-1 px-4 py-1.5 font-medium rounded rounded-md ${selectedFilterStyle}`}
+                        key={filterName}
+                        type="button"
+                        onClick={onFilterButtonClick}>
+                        {capitalizeFilterName(filterValue)}
+                    </button>
+                );
+            })}
         </header>
     );
 }

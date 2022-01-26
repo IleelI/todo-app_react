@@ -83,15 +83,25 @@ class TodoMain extends Component {
 
     render() {
         const { todo, todos, currentFilter } = this.state;
+        const resultsHeading =
+            todos.length !== 0 ? (
+                <h1 className="mb-4 pb-2 border-b border-emerald-800 text-emerald-600 text-xl font-medium text-center">
+                    Here are your todos
+                </h1>
+            ) : (
+                <h1 className="mb-4 pb-2 border-b border-emerald-800 text-slate-700 text-xl font-medium text-center">
+                    Todo list is empty
+                </h1>
+            );
         return (
-            <main className="app__main">
+            <main className="mb-8 p-8 rounded-2xl bg-slate-50 drop-shadow-lg">
                 <TodoForm
                     todo={todo}
                     onTodoInputChange={this.handleTodoInputChange}
                     onTodoFormSubmit={this.handleTodoFormSubmit}
                 />
                 <article className="todo__list-wrapper">
-                    <h1 className="list__heading">Here are your todos</h1>
+                    {resultsHeading}
                     <TodoFilters
                         currentFilter={currentFilter}
                         onFilterButtonClick={this.handleFilterButtonClick}

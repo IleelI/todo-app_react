@@ -13,7 +13,9 @@ function TodoFilters({ currentFilter, onFilterButtonClick }) {
         <header className="mb-4 flex flex-col justify-between flex-wrap sm:flex-row">
             {Object.entries(filters).map(([filterName, filterValue]) => {
                 const selectedFilterStyle =
-                    currentFilter === filterValue ? 'bg-emerald-400 text-white' : '';
+                    currentFilter === filterValue
+                        ? 'bg-emerald-400 text-white'
+                        : 'dark:text-slate-300';
                 return (
                     <button
                         className={`my-1 px-4 py-1.5 font-medium rounded rounded-md ${selectedFilterStyle}`}

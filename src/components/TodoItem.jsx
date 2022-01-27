@@ -4,14 +4,30 @@ import { TrashIcon, CheckIcon } from '@heroicons/react/solid';
 
 function TodoItem({ value, id, onFinishTodoClick, onRemoveTodoClick }) {
     return (
-        <li className="flex items-center justify-between px-4 py-4 bg-slate-500 text-neutral-50">
-            <h3 className="text-lg text-white py-2 px-2">{value}</h3>
-            <div className="flex items-center justify-between">
+        <li
+            className="
+                mb-4 px-4 py-2 bg-slate-50 text-slate-900 rounded-2xl
+                drop-shadow-md
+                flex flex-col items-start-center justify-between
+                sm:flex-row sm:items-center
+                dark:bg-slate-600 dark:text-slate-50">
+            <h3 className="mb-2 p-2 flex-1 text-lg hover:text-emerald-500 ease-in-out transition-colors sm:mb-0">
+                {value}
+            </h3>
+            <div className="flex items-center justify-evenly">
                 <button type="button" className="mx-4" onClick={() => onRemoveTodoClick(id)}>
-                    <TrashIcon className="w-10 h-10 p-2 rounded-full bg-slate-200 text-red-500" />
+                    <TrashIcon
+                        className="
+                        w-10 h-10 p-2 rounded-full text-red-500 bg-slate-100  hover:bg-slate-200
+                        ease-in transition-colors"
+                    />
                 </button>
                 <button type="button" className="mx-4" onClick={() => onFinishTodoClick(id)}>
-                    <CheckIcon className="w-10 h-10 p-2 rounded-full bg-slate-200 text-emerald-500" />
+                    <CheckIcon
+                        className="
+                        w-10 h-10 p-2 rounded-full text-emerald-500 bg-slate-100 hover:bg-slate-200
+                        ease-in transition-colors"
+                    />
                 </button>
             </div>
         </li>

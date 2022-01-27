@@ -8,11 +8,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/AppFooter.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AppFooter.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AppHeader.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AppHeader.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TodoFilters.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TodoFilters.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/TodoForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TodoForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TodoItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TodoItem.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TodoMain.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TodoMain.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +78,7 @@
       <workItem from="1643119105628" duration="647000" />
       <workItem from="1643282441704" duration="3858000" />
       <workItem from="1643295155620" duration="136000" />
-      <workItem from="1643307822587" duration="1591000" />
+      <workItem from="1643307822587" duration="3289000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed workspace.xml file conflicts">
       <created>1643024017107</created>
@@ -102,19 +98,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="origin/development" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>

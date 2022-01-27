@@ -14,9 +14,10 @@ function TodoForm({ todo: { value }, onTodoFormSubmit, onTodoInputChange }) {
                     onChange={onTodoInputChange}
                     className="
                     w-full px-4 py-1.5 rounded-md text-base bg-slate-50
-                    shadow-inner shadow-slate-300
+                    shadow-inner shadow-slate-300 border-b border-slate-300
                     focus:text-emerald-700 focus:shadow-emerald-200 outline-0
-                    dark:bg-slate-600 dark:shadow-inner dark:shadow-slate-800 dark:text-slate-300 dark:focus:text-emerald-500"
+                    dark:bg-slate-600 dark:shadow-inner dark:shadow-slate-800
+                    dark:text-slate-300 dark:focus:text-emerald-500 dark:border-slate-700"
                 />
             </label>
             <button

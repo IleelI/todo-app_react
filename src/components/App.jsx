@@ -10,10 +10,10 @@ class App extends React.Component {
         this.state = {
             isDarkModeOn: false
         };
-        this.toggleDarkMode = this.toggleDarkMode.bind(this);
+        this.handleDarkModeClick = this.handleDarkModeClick.bind(this);
     }
 
-    toggleDarkMode() {
+    handleDarkModeClick() {
         const { isDarkModeOn } = this.state;
         const html = document.querySelector('html');
         const updatedMode = !isDarkModeOn;
@@ -35,10 +35,13 @@ class App extends React.Component {
                     <TodoMain />
                     <AppFooter />
                     <button
-                        className="fixed top-10 right-2.5 p-2 bg-slate-700 text-slate-100 rounded-full drop-shadow-lg"
+                        className="
+                        fixed bottom-12 right-4 p-2 bg-slate-700 text-slate-100
+                        rounded-full shadow-lg drop-shadow-xl
+                        lg:right-1/4 lg:bottom-1/4"
                         type="button"
-                        onClick={this.toggleDarkMode}>
-                        <MoonIcon className="w-8 h-8 md:w-12 md:h-12 xl:w-16 xl:h-16" />
+                        onClick={this.handleDarkModeClick}>
+                        <MoonIcon className="w-8 h-8" />
                     </button>
                 </div>
             </div>

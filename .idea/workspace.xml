@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8d625d3-fa52-4754-ae90-52bafcab246a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AppFooter.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AppFooter.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AppHeader.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AppHeader.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TodoFilters.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TodoFilters.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TodoForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TodoForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TodoItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TodoItem.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TodoMain.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TodoMain.jsx" afterDir="false" />
-    </list>
+    <list default="true" id="f8d625d3-fa52-4754-ae90-52bafcab246a" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

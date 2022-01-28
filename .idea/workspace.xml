@@ -6,9 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="f8d625d3-fa52-4754-ae90-52bafcab246a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AppFooter.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AppFooter.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TodoForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TodoForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/App.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AppFooter.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AppHeader.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TodoFilters.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TodoForm.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TodoItem.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TodoList.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TodoMain.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,13 +58,16 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
-    <property name="settings.editor.selected.configurable" value="AtomSelectConfig" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.TypeScript" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/components" />
+      <recent name="$PROJECT_DIR$/src/components/Todo" />
+      <recent name="$PROJECT_DIR$/src/components/Base" />
+      <recent name="$PROJECT_DIR$/src/components/App" />
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
@@ -78,7 +89,9 @@
       <workItem from="1643119105628" duration="647000" />
       <workItem from="1643282441704" duration="3858000" />
       <workItem from="1643295155620" duration="136000" />
-      <workItem from="1643307822587" duration="3289000" />
+      <workItem from="1643307822587" duration="3409000" />
+      <workItem from="1643372090980" duration="3925000" />
+      <workItem from="1643385552945" duration="4404000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed workspace.xml file conflicts">
       <created>1643024017107</created>

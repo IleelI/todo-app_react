@@ -1,7 +1,9 @@
 import React from 'react';
 import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/outline';
+import { FILTERS } from '../constants';
 
 function TodoListFilters() {
+    const filterOptions = [...Object.entries(FILTERS.STATE), ...Object.entries(FILTERS.PRIORITY)];
     return (
         <div className="list-filters">
             <h5>
@@ -12,12 +14,9 @@ function TodoListFilters() {
                 <ChevronUpIcon className="w-4 h-4" />
             </button>
             <ul className="filters">
-                <li className="selected-filter">All</li>
-                <li>Finished</li>
-                <li>Unfinished</li>
-                <li className="selected-filter">Important</li>
-                <li>Normal</li>
-                <li>Not Important</li>
+                {filterOptions.map(([key, val]) => (
+                    <li key={key}>{val}</li>
+                ))}
             </ul>
         </div>
     );

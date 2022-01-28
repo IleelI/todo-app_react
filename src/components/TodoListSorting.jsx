@@ -1,7 +1,9 @@
 import React from 'react';
 import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/outline';
+import { SORTING } from '../constants';
 
 function TodoListSorting() {
+    const sortingOptions = [...Object.entries(SORTING)];
     return (
         <div className="list-sorting">
             <h5>
@@ -12,10 +14,9 @@ function TodoListSorting() {
                 <ChevronUpIcon className="w-4 h-4" />
             </button>
             <ul className="sorting">
-                <li className="selected-sort">Priority Ascending</li>
-                <li>Priority Descending</li>
-                <li>Oldest</li>
-                <li>Newest</li>
+                {sortingOptions.map(([key, val]) => (
+                    <li key={key}>{val}</li>
+                ))}
             </ul>
         </div>
     );

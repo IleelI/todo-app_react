@@ -1,13 +1,13 @@
 export const FILTERS = {
     STATE: {
-        IMPORTANT: 'Important',
-        NORMAL: 'Normal',
-        NOT_IMPORTANT: 'Not important'
-    },
-    PRIORITY: {
         ALL: 'All',
         FINISHED: 'Finished',
         UNFINISHED: 'Unfinished'
+    },
+    PRIORITY: {
+        IMPORTANT: 'Important',
+        NORMAL: 'Normal',
+        NOT_IMPORTANT: 'Not important'
     }
 };
 

@@ -1,6 +1,5 @@
 export const FILTERS = {
     STATE: {
-        ALL: 'All',
         FINISHED: 'Finished',
         UNFINISHED: 'Unfinished'
     },
@@ -16,6 +15,11 @@ export const SORTING = {
     PRIORITY_DESC: 'Priority Descending',
     NEWEST: 'Newest',
     OLDEST: 'Oldest'
+};
+
+export const SORT_DIRECTION = {
+    ASC: 'Ascending',
+    DSC: 'Descending'
 };
 
 export default { FILTERS, SORTING };

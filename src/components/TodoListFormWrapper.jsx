@@ -4,6 +4,7 @@ import { v4 as uuid } from 'uuid';
 import ComponentToggler from './ComponentToggler';
 import TodoListForm from './TodoListForm';
 import { FILTERS } from '../constants';
+import { getFullTimeAndDate } from '../utils/utils';
 
 class TodoListFormWrapper extends Component {
     constructor(props) {
@@ -15,7 +16,9 @@ class TodoListFormWrapper extends Component {
                     id: uuid(),
                     name: '',
                     deadline: '',
-                    priority: FILTERS.PRIORITY.NORMAL
+                    priority: FILTERS.PRIORITY.NORMAL,
+                    isFinished: false,
+                    date: getFullTimeAndDate()
                 },
                 errors: []
             }
@@ -71,9 +74,11 @@ class TodoListFormWrapper extends Component {
                 formState: {
                     todo: {
                         id: uuid(),
+                        date: getFullTimeAndDate(),
                         name: '',
                         deadline: '',
-                        priority: FILTERS.PRIORITY.NORMAL
+                        priority: FILTERS.PRIORITY.NORMAL,
+                        isFinished: false
                     },
                     errors: []
                 }
@@ -87,6 +92,7 @@ class TodoListFormWrapper extends Component {
         return (
             <article className="form-wrapper">
                 <ComponentToggler
+                    isComponentToggled={isFormToggled}
                     componentTitle="Add new todo."
                     onButtonClick={this.handleToggleFormClick}
                 />

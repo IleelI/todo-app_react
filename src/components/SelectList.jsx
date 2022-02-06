@@ -30,10 +30,13 @@ class SelectList extends Component {
             <div
                 className="options mb-4 px-4 py-1.5 bg-gray-700 text-zinc-50 rounded rounded-md
                 dark:text-gray-700 dark:bg-zinc-50">
-                <h5 className="col-start-1 col-end-2">
+                <button
+                    type="button"
+                    className="col-start-1 col-end-2 text-left"
+                    onClick={this.handleSelectListToggleClick}>
                     <span className="font-semibold">{optionsInfo}</span>
                     <span className="text-sm">{selectedOptionsInfo}</span>
-                </h5>
+                </button>
                 <SelectToggler
                     isSelectToggled={isSelectListToggled}
                     onSelectTogglerClick={this.handleSelectListToggleClick}

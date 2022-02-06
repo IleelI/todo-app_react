@@ -7,9 +7,6 @@ import FlashMessage from '../FlashMessage';
 
 /*
     TODO
-        1) Add short message for user when successfully created a new to-do.
-        2) Add short message for user when to-do has been deleted.
-        3) Add styles for application
         4) Look for possible improvements in components and app logic.
         5) Polish code for production
  */

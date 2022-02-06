@@ -23,7 +23,6 @@ class TodoListFormWrapper extends Component {
                 errors: []
             }
         };
-
         this.handleToggleFormClick = this.handleToggleFormClick.bind(this);
         this.handleTodoInputChange = this.handleTodoInputChange.bind(this);
         this.handleTodoFormSubmit = this.handleTodoFormSubmit.bind(this);

@@ -6,8 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="f8d625d3-fa52-4754-ae90-52bafcab246a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/FlashMessage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FlashMessage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/App/Main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App/Main.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/SelectList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SelectList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TodoList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TodoList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TodoListFormWrapper.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TodoListFormWrapper.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TodoListItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TodoListItem.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +92,8 @@
       <workItem from="1643385552945" duration="4404000" />
       <workItem from="1643392162382" duration="14769000" />
       <workItem from="1643459769686" duration="19401000" />
-      <workItem from="1644164386696" duration="14443000" />
+      <workItem from="1644164386696" duration="14471000" />
+      <workItem from="1644182337474" duration="3103000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed workspace.xml file conflicts">
       <created>1643024017107</created>

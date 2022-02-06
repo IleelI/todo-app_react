@@ -18,7 +18,7 @@ function TodoList({ todos, listOptions, onTodoFinishClick, onTodoRemoveClick }) 
     }
     if (outputTodos.length !== 0) {
         return (
-            <ol className="todo-list">
+            <ol className="pt-2 border-t border-gray-400 flex flex-col flex-wrap dark:border-gray-400">
                 {outputTodos.map((todo) => {
                     return (
                         <TodoListItem

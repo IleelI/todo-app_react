@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { v4 as uuid } from 'uuid';
 import ComponentToggler from './ComponentToggler';
 import TodoListForm from './TodoListForm';
-import { FILTERS } from '../constants';
+import { FILTERS } from '../utils/constants';
 import { getFullTimeAndDate } from '../utils/utils';
 
 class TodoListFormWrapper extends Component {
@@ -90,10 +90,10 @@ class TodoListFormWrapper extends Component {
     render() {
         const { isFormToggled, formState } = this.state;
         return (
-            <article className="form-wrapper">
+            <article className="mb-8 bg-zinc-50 rounded-lg dark:bg-gray-700">
                 <ComponentToggler
                     isComponentToggled={isFormToggled}
-                    componentTitle="Add new todo."
+                    componentTitle="Add new todo"
                     onButtonClick={this.handleToggleFormClick}
                 />
                 {isFormToggled ? (

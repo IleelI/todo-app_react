@@ -27,22 +27,28 @@ class SelectList extends Component {
         const { isSelectListToggled } = this.state;
         const { options, optionsInfo, selectedOptionsInfo, selectedOptions } = this.props;
         return (
-            <div className="select-list">
-                <h5>
-                    {optionsInfo}
-                    <span>{selectedOptionsInfo}</span>
+            <div
+                className="options mb-4 px-4 py-1.5 bg-gray-700 text-zinc-50 rounded rounded-md
+                dark:text-gray-700 dark:bg-zinc-50">
+                <h5 className="col-start-1 col-end-2">
+                    <span className="font-semibold">{optionsInfo}</span>
+                    <span className="text-sm">{selectedOptionsInfo}</span>
                 </h5>
                 <SelectToggler
                     isSelectToggled={isSelectListToggled}
                     onSelectTogglerClick={this.handleSelectListToggleClick}
                 />
                 {isSelectListToggled ? (
-                    <ul className="sorting">
+                    <ul className="col-span-2 pt-0.5 flex flex-col items-start border-t border-zinc-50 dark:border-gray-700">
                         {options.map(([key, val]) => {
                             const found = selectedOptions.find((option) => option === val);
                             return (
                                 <button
-                                    className={found ? 'option option--active' : 'option'}
+                                    className={
+                                        found
+                                            ? 'my-0.5 text-md text-emerald-500 font-semibold'
+                                            : 'my-0.5 text-md'
+                                    }
                                     type="button"
                                     onClick={this.handleNewOptionToggleClick}
                                     key={key}>

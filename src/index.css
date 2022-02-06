@@ -6,3 +6,12 @@
     margin: 0;
     padding: 0;
 }
+
+.options {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-auto-rows: auto;
+    align-items: center;
+    grid-row-gap: .25rem;
+    grid-column-gap: .25rem;
+}

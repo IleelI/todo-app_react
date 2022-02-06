@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import TodoListItem from './TodoListItem';
 import { getPrioritySortedList, getTimeSortedList, getFilteredList } from '../utils/utils';
-import { SORTING } from '../constants';
+import { SORTING } from '../utils/constants';
 
 function TodoList({ todos, listOptions, onTodoFinishClick, onTodoRemoveClick }) {
     const {
@@ -16,27 +16,23 @@ function TodoList({ todos, listOptions, onTodoFinishClick, onTodoRemoveClick }) 
     } else {
         getPrioritySortedList(outputTodos, selectedSort);
     }
-
-    return (
-        <div>
-            {outputTodos.length !== 0 ? (
-                <ol className="todo-list">
-                    {outputTodos.map((todo) => {
-                        return (
-                            <TodoListItem
-                                key={todo.id}
-                                todo={todo}
-                                onTodoFinishClick={onTodoFinishClick}
-                                onTodoRemoveClick={onTodoRemoveClick}
-                            />
-                        );
-                    })}
-                </ol>
-            ) : (
-                <h1>No todos found :(</h1>
-            )}
-        </div>
-    );
+    if (outputTodos.length !== 0) {
+        return (
+            <ol className="todo-list">
+                {outputTodos.map((todo) => {
+                    return (
+                        <TodoListItem
+                            key={todo.id}
+                            todo={todo}
+                            onTodoFinishClick={onTodoFinishClick}
+                            onTodoRemoveClick={onTodoRemoveClick}
+                        />
+                    );
+                })}
+            </ol>
+        );
+    }
+    return <h1>No todos found :(</h1>;
 }
 
 TodoList.propTypes = {

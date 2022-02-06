@@ -1,4 +1,4 @@
-import { FILTERS, SORTING } from '../constants';
+import { FILTERS, SORTING } from './constants';
 
 export function getActiveOptionsString(activeOptions) {
     if (activeOptions.length > 0) {

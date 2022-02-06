@@ -25,7 +25,7 @@ class App extends Component {
     render() {
         const { isDarkModeToggled } = this.state;
         return (
-            <div>
+            <div className="w-full min-h-screen flex flex-col p-8 bg-zinc-200 dark:bg-gray-800">
                 <Header
                     isDarkModeToggled={isDarkModeToggled}
                     onDarkModeToggleClick={this.handleDarkModeToggle}

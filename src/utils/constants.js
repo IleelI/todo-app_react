@@ -22,4 +22,11 @@ export const SORT_DIRECTION = {
     DSC: 'Descending'
 };
 
+export const FLASH_MESSAGE_TYPES = {
+    INFO: 'Info',
+    ERROR: 'Error'
+};
+
+export const FLASH_DURATION = 1500;
+
 export default { FILTERS, SORTING };

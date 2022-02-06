@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import ComponentToggler from './ComponentToggler';
 import TodoListOptions from './TodoListOptions';
 import TodoList from './TodoList';
-import { SORTING } from '../constants';
+import { SORTING } from '../utils/constants';
 
 class TodoListWrapper extends Component {
     constructor(props) {
@@ -60,14 +60,14 @@ class TodoListWrapper extends Component {
         const { isTodoListToggled, listOptions } = this.state;
         const { todos, onTodoRemoveClick, onTodoFinishClick } = this.props;
         return (
-            <main className="todo-list-wrapper">
+            <article className="mb-8 bg-zinc-50 rounded-lg dark:bg-gray-700">
                 <ComponentToggler
                     isComponentToggled={isTodoListToggled}
                     componentTitle="Your todos"
                     onButtonClick={this.handleToggleTodoListClick}
                 />
                 {isTodoListToggled ? (
-                    <div>
+                    <div className="px-8 pt-4 pb-8 text-gray-700 dark:text-zinc-50">
                         <TodoListOptions
                             listOptions={listOptions}
                             onNewFilterToggleClick={this.handleNewFilterToggleClick}
@@ -81,7 +81,7 @@ class TodoListWrapper extends Component {
                         />
                     </div>
                 ) : null}
-            </main>
+            </article>
         );
     }
 }

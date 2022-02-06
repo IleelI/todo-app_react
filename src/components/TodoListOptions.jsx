@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { FILTERS, SORTING } from '../constants';
+import { FILTERS, SORTING } from '../utils/constants';
 import SelectList from './SelectList';
 import { getActiveOptionsString } from '../utils/utils';
 
@@ -10,7 +10,7 @@ const filteringOptions = [...Object.entries(FILTERS.STATE), ...Object.entries(FI
 function TodoListOptions({ listOptions, onNewFilterToggleClick, onNewSortingToggleClick }) {
     const { selectedFilters, selectedSorting } = listOptions;
     return (
-        <nav className="list-options">
+        <nav className="flex flex-col">
             <SelectList
                 options={filteringOptions}
                 optionsInfo="Filters: "

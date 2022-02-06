@@ -4,12 +4,19 @@ import { FLASH_MESSAGE_TYPES } from '../utils/constants';
 
 function FlashMessage({ flashState }) {
     const { flashType, flashText } = flashState;
-    const msgColor = flashType === FLASH_MESSAGE_TYPES.ERROR ? 'orange' : 'emerald';
-    const flashStyle = `absolute top-0 left-1/2 z-10 transform -translate-x-1/2 w-full px-8 py-1.5
-            border-2 rounded-lg border-${msgColor}-500 bg-white text-${msgColor}-500 drop-shadow-lg`;
+    let msgColors;
+    if (flashType === FLASH_MESSAGE_TYPES.ERROR) {
+        msgColors = `border-orange-500 text-orange-500`;
+    } else {
+        msgColors = 'border-emerald-500 text-emerald-500';
+    }
+
     return (
-        <div className={flashStyle}>
-            <h3 className="font-semibold text-xl whitespace-nowrap text-center">{flashText}</h3>
+        <div className="fixed top-8 left-0 z-10 w-full px-8">
+            <div
+                className={`px-8 py-2 rounded rounded-lg border ${msgColors} bg-zinc-50 shadow drop-shadow-lg shadow-gray-300`}>
+                <h3 className="font-semibold text-xl whitespace-nowrap text-center">{flashText}</h3>
+            </div>
         </div>
     );
 }

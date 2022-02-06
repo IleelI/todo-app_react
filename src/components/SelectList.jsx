@@ -46,8 +46,8 @@ class SelectList extends Component {
                                 <button
                                     className={
                                         found
-                                            ? 'my-0.5 text-md text-emerald-500 font-semibold'
-                                            : 'my-0.5 text-md'
+                                            ? 'my-1 py-0.5 text-md text-emerald-500 font-semibold'
+                                            : 'my-1 py-0.5 text-md'
                                     }
                                     type="button"
                                     onClick={this.handleNewOptionToggleClick}

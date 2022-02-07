@@ -4,7 +4,13 @@ import TodoListItem from './TodoListItem';
 import { getPrioritySortedList, getTimeSortedList, getFilteredList } from '../utils/utils';
 import { SORTING } from '../utils/constants';
 
-function TodoList({ todos, listOptions, onTodoFinishClick, onTodoRemoveClick }) {
+function TodoList({
+    todos,
+    listOptions,
+    onTodoFinishClick,
+    onTodoRemoveClick,
+    onTodoEditToggleClick
+}) {
     const {
         selectedSorting: [selectedSort],
         selectedFilters
@@ -26,6 +32,7 @@ function TodoList({ todos, listOptions, onTodoFinishClick, onTodoRemoveClick }) 
                             todo={todo}
                             onTodoFinishClick={onTodoFinishClick}
                             onTodoRemoveClick={onTodoRemoveClick}
+                            onTodoEditToggleClick={onTodoEditToggleClick}
                         />
                     );
                 })}
@@ -51,13 +58,15 @@ TodoList.propTypes = {
         selectedSorting: PropTypes.arrayOf(PropTypes.string)
     }),
     onTodoFinishClick: PropTypes.func,
-    onTodoRemoveClick: PropTypes.func
+    onTodoRemoveClick: PropTypes.func,
+    onTodoEditToggleClick: PropTypes.func
 };
 TodoList.defaultProps = {
     todos: [],
     listOptions: null,
     onTodoFinishClick: null,
-    onTodoRemoveClick: null
+    onTodoRemoveClick: null,
+    onTodoEditToggleClick: null
 };
 
 export default TodoList;

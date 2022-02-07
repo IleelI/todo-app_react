@@ -58,7 +58,7 @@ class TodoListWrapper extends Component {
 
     render() {
         const { isTodoListToggled, listOptions } = this.state;
-        const { todos, onTodoRemoveClick, onTodoFinishClick } = this.props;
+        const { todos, onTodoRemoveClick, onTodoFinishClick, onTodoEditToggleClick } = this.props;
         return (
             <article className="mb-8 bg-zinc-50 rounded-lg dark:bg-gray-700">
                 <ComponentToggler
@@ -78,6 +78,7 @@ class TodoListWrapper extends Component {
                             listOptions={listOptions}
                             onTodoRemoveClick={onTodoRemoveClick}
                             onTodoFinishClick={onTodoFinishClick}
+                            onTodoEditToggleClick={onTodoEditToggleClick}
                         />
                     </div>
                 ) : null}
@@ -98,12 +99,14 @@ TodoListWrapper.propTypes = {
         })
     ),
     onTodoFinishClick: PropTypes.func,
-    onTodoRemoveClick: PropTypes.func
+    onTodoRemoveClick: PropTypes.func,
+    onTodoEditToggleClick: PropTypes.func
 };
 TodoListWrapper.defaultProps = {
     todos: [],
     onTodoFinishClick: null,
-    onTodoRemoveClick: null
+    onTodoRemoveClick: null,
+    onTodoEditToggleClick: null
 };
 
 export default TodoListWrapper;

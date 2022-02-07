@@ -11,7 +11,9 @@ function ComponentToggler({
         <header
             className="relative px-8 py-0.5 border border-gray-700
             rounded-lg bg-zinc-50 dark:border-zinc-50 dark:bg-gray-700">
-            <h3 className="font-medium text-left text-2xl dark:text-zinc-50">{componentTitle}</h3>
+            <h3 className="mr-4 font-medium text-left text-2xl dark:text-zinc-50">
+                {componentTitle}
+            </h3>
             <button
                 className="absolute right-0 top-1/2 transform -translate-y-1/2 h-full bg-gray-700
                 rounded-md text-zinc-50 dark:text-gray-700 dark:bg-zinc-50"

@@ -1,32 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { FILTERS } from '../utils/constants';
-
-function formErrors({ errors }) {
-    return errors.length === 0 ? null : (
-        <ul className="mb-4 px-4 py-2 border border-red-600 rounded-lg dark:border-red-500">
-            {errors.map((error) => (
-                <li
-                    className="my-0.5 text-xs font-semibold text-red-600 dark:text-red-500"
-                    key={error}>
-                    {error}
-                </li>
-            ))}
-        </ul>
-    );
-}
-
-function priorityOptions(options) {
-    return options.map(([key, val]) => <option key={key}>{val}</option>);
-}
+import { priorityOptions, getFormErrors } from '../utils/utils';
 
 function TodoListForm({ formState, onTodoInputChange, onTodoFormSubmit }) {
     const { PRIORITY } = FILTERS;
-    const { todo } = formState;
+    const { todo, errors } = formState;
     const options = Object.entries(PRIORITY);
     return (
         <form className="px-8 pt-4 pb-8 dark:text-zinc-50" onSubmit={onTodoFormSubmit}>
-            {formErrors(formState)}
+            {getFormErrors(errors)}
             <label htmlFor="todoName">
                 <h3 className="text-xl font-normal mb-2">Todo name:</h3>
                 <input

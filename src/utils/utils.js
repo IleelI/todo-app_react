@@ -1,3 +1,4 @@
+import React from 'react';
 import { FILTERS, SORTING } from './constants';
 
 export function getActiveOptionsString(activeOptions) {
@@ -76,6 +77,24 @@ export function getFilteredList(list, filterBy) {
         });
         return shouldStay;
     });
+}
+
+export function priorityOptions(options) {
+    return options.map(([key, val]) => <option key={key}>{val}</option>);
+}
+
+export function getFormErrors(errors) {
+    return errors.length === 0 ? null : (
+        <ul className="my-4 mx-2 px-4 py-2 border border-red-600 rounded-lg dark:border-red-500">
+            {errors.map((error) => (
+                <li
+                    className="my-0.5 text-xs font-semibold text-red-600 dark:text-red-500"
+                    key={error}>
+                    {error}
+                </li>
+            ))}
+        </ul>
+    );
 }
 
 export default { getActiveOptionsString, getTodoImportance };

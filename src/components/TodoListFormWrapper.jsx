@@ -15,7 +15,7 @@ class TodoListFormWrapper extends Component {
                 todo: {
                     id: uuid(),
                     name: '',
-                    deadline: '',
+                    deadline: '2022-02-02',
                     priority: FILTERS.PRIORITY.NORMAL,
                     isFinished: false,
                     date: getFullTimeAndDate()

@@ -26,7 +26,7 @@ function TodoListForm({ formState, onTodoInputChange, onTodoFormSubmit }) {
                 <input
                     className="w-full mb-4 px-2 py-1.5 bg-zinc-100 shadow-inner shadow-gray-300 rounded-md
                     dark:bg-gray-600 dark:shadow-gray-800"
-                    type="text"
+                    type="date"
                     name="deadline"
                     value={todo.deadline}
                     onChange={onTodoInputChange}

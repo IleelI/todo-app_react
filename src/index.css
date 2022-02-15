@@ -5,5 +5,31 @@
 *, *::before, *::after {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+}
+
+.options {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-auto-rows: auto;
+    align-items: center;
+    grid-row-gap: .25rem;
+    grid-column-gap: .25rem;
+}
+
+.importance-bar {
+    position: relative;
+    padding-left: .75rem;
+}
+.importance-bar + .importance-bar {
+    margin-top: 1.5rem;
+}
+
+.importance-bar::before {
+    position: absolute;
+    content: '';
+    top: .25rem;
+    left: 0;
+    width: .25rem;
+    height: calc(100% - .5rem);
+    border-radius: 4rem 4rem;
 }

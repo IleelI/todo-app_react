@@ -1,46 +1,37 @@
-import React from 'react';
-import { MoonIcon } from '@heroicons/react/solid';
-import AppHeader from './AppHeader';
-import AppFooter from './AppFooter';
-import TodoMain from './TodoMain';
+import React, { Component } from 'react';
+import Header from './App/Header';
+import Footer from './App/Footer';
+import Main from './App/Main';
 
-class App extends React.Component {
+class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            isDarkModeOn: false
+            isDarkModeToggled: false
         };
-        this.toggleDarkMode = this.toggleDarkMode.bind(this);
+        this.handleDarkModeToggle = this.handleDarkModeToggle.bind(this);
     }
 
-    toggleDarkMode() {
-        const { isDarkModeOn } = this.state;
+    handleDarkModeToggle() {
+        const { isDarkModeToggled: isDarkModeOn } = this.state;
         const html = document.querySelector('html');
-        const updatedMode = !isDarkModeOn;
-        if (isDarkModeOn) {
-            html.removeAttribute('class');
-        } else {
-            html.setAttribute('class', 'dark');
-        }
-        this.setState({
-            isDarkModeOn: updatedMode
-        });
+        if (isDarkModeOn) html.classList.remove('dark');
+        else html.classList.add('dark');
+        this.setState(({ isDarkModeToggled }) => ({
+            isDarkModeToggled: !isDarkModeToggled
+        }));
     }
 
     render() {
+        const { isDarkModeToggled } = this.state;
         return (
-            <div className="p-8 min-h-screen">
-                <div className="relative w-11/12 mx-auto flex flex-col sm:container md:w-3/5 lg:w-2/5">
-                    <AppHeader />
-                    <TodoMain />
-                    <AppFooter />
-                    <button
-                        className="fixed top-10 right-2.5 p-2 bg-slate-700 text-slate-100 rounded-full drop-shadow-lg"
-                        type="button"
-                        onClick={this.toggleDarkMode}>
-                        <MoonIcon className="w-8 h-8 md:w-12 md:h-12 xl:w-16 xl:h-16" />
-                    </button>
-                </div>
+            <div className="w-full min-h-screen flex flex-col p-8 bg-zinc-200 dark:bg-gray-800">
+                <Header
+                    isDarkModeToggled={isDarkModeToggled}
+                    onDarkModeToggleClick={this.handleDarkModeToggle}
+                />
+                <Main />
+                <Footer />
             </div>
         );
     }

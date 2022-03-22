@@ -2,9 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
+}
+html,
+body {
+    font-size: clamp(100%, 1rem + 0.2vw + 0.05vh, 24px);
 }
 
 .options {
@@ -12,13 +18,13 @@
     grid-template-columns: 1fr auto;
     grid-auto-rows: auto;
     align-items: center;
-    grid-row-gap: .25rem;
-    grid-column-gap: .25rem;
+    grid-row-gap: 0.25rem;
+    grid-column-gap: 0.25rem;
 }
 
 .importance-bar {
     position: relative;
-    padding-left: .75rem;
+    padding-left: 0.75rem;
 }
 .importance-bar + .importance-bar {
     margin-top: 1.5rem;
@@ -27,9 +33,9 @@
 .importance-bar::before {
     position: absolute;
     content: '';
-    top: .25rem;
+    top: 0.25rem;
     left: 0;
-    width: .25rem;
-    height: calc(100% - .5rem);
+    width: 0.25rem;
+    height: calc(100% - 0.5rem);
     border-radius: 4rem 4rem;
 }

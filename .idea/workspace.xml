@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f8d625d3-fa52-4754-ae90-52bafcab246a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,6 +39,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="full.screen.before.presentation.mode" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -47,7 +49,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -104,7 +106,13 @@
       <workItem from="1644182337474" duration="3140000" />
       <workItem from="1644235765263" duration="7695000" />
       <workItem from="1644946529433" duration="242000" />
-      <workItem from="1644948849501" duration="323000" />
+      <workItem from="1644948849501" duration="645000" />
+      <workItem from="1645186848829" duration="126000" />
+      <workItem from="1645188191729" duration="28000" />
+      <workItem from="1645206543143" duration="685000" />
+      <workItem from="1645214476947" duration="368000" />
+      <workItem from="1645479826451" duration="12000" />
+      <workItem from="1646308135652" duration="291000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed workspace.xml file conflicts">
       <created>1643024017107</created>

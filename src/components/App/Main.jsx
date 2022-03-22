@@ -6,10 +6,6 @@ import FlashMessage from '../FlashMessage';
 import TodoEditModal from '../TodoEditModal';
 import { FLASH_DURATION, FLASH_MESSAGE_TYPES } from '../../utils/constants';
 
-/*
-    TODO
-*/
-
 class Main extends Component {
     constructor(props) {
         super(props);
@@ -163,7 +159,7 @@ class Main extends Component {
     render() {
         const { todos, flashState, editState } = this.state;
         return (
-            <main className="relative">
+            <main className="w-full relative sm:w-3/5 sm:min-w-320 lg:w-2/5">
                 {flashState.isToggled ? <FlashMessage flashState={flashState} /> : null}
                 {editState.isEditToggled ? (
                     <TodoEditModal

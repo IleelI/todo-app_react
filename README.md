@@ -1,17 +1,14 @@
-# Todo App React - Doify
+# Simple React To-Do App - _Doify_ 📝
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Tech used  🔌
+* React
+* TailwindCss
+* CRA (Create React App)
 
-Used technologies: React Tailwind CSS.
-
-## Available Scripts
-
-To run app, cd into project directory and run:
-
-### `npm start`
+## How to run? 
+1) Clone repo
+2) ```cd``` into project directory
+3) Run `npm install` and `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
